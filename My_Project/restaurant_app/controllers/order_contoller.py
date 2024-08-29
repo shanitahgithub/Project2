@@ -44,7 +44,7 @@ def create_order():
             return jsonify({"message": "Item does not exist", "error": "Validation error"}), 400
 
         # Create a new Order object
-        # Create
+        # Create a new order
         new_order = Order(
             restaurant_id=restaurant_id,
             quantity=quantity,
