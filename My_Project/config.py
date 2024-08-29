@@ -1,5 +1,5 @@
 
-
+# My config
 class Config:
     SQLALCHEMY_DATABASE_URI='mysql+pymysql://root:@localhost/project'
     JWT_SECRET_KEY='customers'
