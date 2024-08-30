@@ -113,10 +113,8 @@ jobs:
       - name: Build and push frontend Docker image
         uses: docker/build-push-action@v5
         with:
-          # context: ./restaurant-website
-          # file: ./restaurant-website/Dockerfile
-          context: "./RECESS PROJECT/restaurant-website"
-          file: "./RECESS PROJECT/restaurant-website/Dockerfile"
+          context: ./restaurant-website
+          file: ./restaurant-website/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/flask-frontend-demo:latest
 
