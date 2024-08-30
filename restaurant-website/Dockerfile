@@ -27,7 +27,8 @@
 FROM node:20.14.0-alpine
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /restaurant-website
+
 
 # Copy the package.json and package-lock.json files
 COPY package*.json ./
