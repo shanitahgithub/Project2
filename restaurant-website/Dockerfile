@@ -22,28 +22,23 @@
 # Run the app
 # CMD ["npm", "start"]
 
-# Specify the base image
-FROM node:alpine
+# Use an official Node.js runtime as a parent image
+FROM node:20.14.0
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the package.json and package-lock.json files
-COPY package*.json /app/
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-# Clean npm cache and install dependencies
-RUN npm cache clean --force
-RUN npm config set registry https://registry.npmjs.org/
-RUN npm install --verbose
+# Install dependencies
+RUN npm install
 
-# Copy the app files
-COPY . /app/
+# Copy the rest of the application code
+COPY . .
 
-# Build the app
-RUN npm run build
-
-# Expose the port
+# Expose port
 EXPOSE 3000
 
-# Run the app
+# Command to run the application
 CMD ["npm", "start"]
