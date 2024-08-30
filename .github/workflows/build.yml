@@ -114,7 +114,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./restaurant-website
-          file: ./restaurant-website/Dockerfile
+          file: ./RECESS PROJECT/restaurant-website/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/flask-frontend-demo:latest
 
