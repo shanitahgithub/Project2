@@ -15,7 +15,7 @@ RUN pip install -r requirements.txt
 # Copy the application codes
 COPY . .
 
-Expose 5000
+EXPOSE 5000
 
 # Run migrations and start the app
 CMD ["guinicorn","-b","0.0.0.0:5000","My_Project:create_app()"]
