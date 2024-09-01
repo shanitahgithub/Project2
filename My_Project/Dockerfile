@@ -1,4 +1,4 @@
-# Use the official Python image
+# Use the official Python images
 FROM python:3.12-slim
 
 # Set environment variables
