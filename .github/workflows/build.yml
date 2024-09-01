@@ -117,7 +117,7 @@ jobs:
           context: ./restaurant-website
           file: ./restaurant-website/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/flask-frontend-demo:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/witu:latest
 
       - name: Log out of Docker Hub
         run: docker logout
