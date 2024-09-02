@@ -1,24 +1,23 @@
 # Specify the base image with the desired Node.js version
 FROM node:20.14.0
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /restaurant-website
 
 # Copy the package.json and package-lock.json files
 COPY package*.json ./
 
-RUN npm install
 # Install the dependencies with verbose output for debugging
 RUN npm install --verbose
 
-# Copy the application filess
+# Copy the rest of the application files
 COPY . .
 
-# Build the app
+# Build the app (only necessary for production or if you have a build step)
 RUN npm run build
 
 # Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 5000
 
 # Set the environment to production (optional)
 ENV NODE_ENV=production
