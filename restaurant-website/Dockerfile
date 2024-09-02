@@ -7,6 +7,7 @@ WORKDIR /restaurant-website
 
 # Copy the package.json and package-lock.json files
 COPY package*.json ./
+RUN npm install --force --verbose
 
 # Install the dependencies with verbose output for debugging
 RUN npm install --verbose
