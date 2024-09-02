@@ -1,5 +1,5 @@
 # Specify the base image with the desired Node.js version
-FROM node:20.14.0-alpine
+FROM node:20.14.0
 
 # Set the working directory
 WORKDIR /restaurant-website
