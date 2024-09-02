@@ -11,7 +11,7 @@ RUN npm install
 # Install the dependencies with verbose output for debugging
 RUN npm install --verbose
 
-# Copy the application files
+# Copy the application filess
 COPY . .
 
 # Build the app
