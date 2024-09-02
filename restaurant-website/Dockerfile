@@ -5,7 +5,7 @@ FROM node:18-alpine
 # Set the working directory inside the container
 WORKDIR /restaurant-website
 
-# Copy the package.json and package-lock.json files
+# Copy the package.jsonn and package-lock.json files
 COPY package*.json ./
 RUN npm install --force --verbose
 
