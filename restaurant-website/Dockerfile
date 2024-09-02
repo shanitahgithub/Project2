@@ -1,5 +1,6 @@
 # Specify the base image with the desired Node.js version
-FROM node:20.14.0
+FROM node:18-alpine
+
 
 # Set the working directory inside the container
 WORKDIR /restaurant-website
